@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital scale=1.0">
+    <title>Chaparral Orchestra Community</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #E60000;
+        color: #000;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+      }
+
+      nav {
+        background-color: #020AD5;
+        color: #000;
+        padding: 10px;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #A8A8A8;
+        color: #000;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 22px;
+      }
+      
+      footer div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* align-items: center; Center items horizontally */
+      }
+      
+      .container {
+        display: flex;
+        height: 70vh;
+        width: 100vw;
+        overflow: auto;
+      }
+
+      .links-container {
+        padding: 20px;
+        background-color: #f4f4f4;
+        width: 8%;
+        height: 100%;
+        overflow: auto;
+      }
+
+      .page-container {
+        flex: 1;
+        background-color: #fff;
+        padding: 5px;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+      }
+
+      .calendar-iframe {
+        height: 70vh;
+        width: 85vw;
+        border: 0;
+      }
+
+      .link-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .link-list li {
+        margin-bottom: 10px;
+      }
+
+      .link-list li a {
+        display: block;
+        padding: 10px;
+        background-color: #fff;
+        text-decoration: none;
+        color: #000;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .link-list li a:hover,
+      .link-list li a.selected {
+        background-color: #FF0000;
+        color: #000;
+        text-decoration: underline;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Chaparral Orchestra Community</h1>
+    </header>
+    <nav>
+      <img class="header-image" src="images/firebirdt.png" alt="Firebird" height="88" width="115"></a>
+      <img class="header-image" src="images/horseg.png" alt="Horse" height="88" width="88" style="margin-left: 80px;"></a>
+    </nav>
+    <div class="container">
+      <div class="links-container">
+        <ul class="link-list">
+          <li><a href="#" onclick="showPage('home')" id="link-home">Home</a></li>
+          <li><a href="#" onclick="showPage('calendar')" id="link-calendar">Calendar</a></li>
+          <li><a href="#" onclick="showPage('note-reading')" id="link-note-reading">Note Reading</a></li>
+          <li><a href="#" onclick="showPage('stuff')" id="link-stuff">Stuff</a></li>
+        </ul>
+      </div>
+      <div class="page-container">
+        <div id="page-home" style="display: none;">
+          <h2>Home Page</h2>
+          <p>This is the content of the Home page.</p>
+        </div>
+        <div id="page-calendar" style="display: none;">
+          <div id="calendar" class="calendar-iframe">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix&showNav=1&showTitle=1&title=Chaparral%20HS%20and%20Cocopah%20MS&src=YmFmZWYyMDNjNzdhYjQ1M2IyZmE1NmIxZjI5MWYwOTU5NDMxNDk4OGE5OTNiOGY2ZGM4YThjM2EzZWZjYTVjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div id="page-note-reading" style="display: none;">
+          <h2>Note Reading Page</h2>
+          <p>This is the content of the Note Reading page.</p>
+        </div>
+        <div id="page-stuff" style="display: none;">
+          <h2>Stuff Page</h2>
+          <p>This is the content of the Stuff page.</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <p>This webpage is sponsored by Pohle EZGO Cushman</p>
+        <a href="https://www.pohlenv.com/" target="blank">Visit pohlenv.com</a>
+      </div>
+    </footer>
+    <script>
+      function showPage(pageId) {
+        const links = document.querySelectorAll('.link-list li a');
+        const pages = document.querySelectorAll('.page-container > div');
+
+        // Hide all pages
+        pages.forEach(page => {
+          page.style.display = 'none';
+        });
+
+        // Deselect all links
+        links.forEach(link => {
+          link.classList.remove('selected');
+        });
+
+        // Show selected page
+        const selectedPage = document.getElementById('page-' + pageId);
+        selectedPage.style.display = 'block';
+
+        // Select the clicked link
+        const selectedLink = document.getElementById('link-' + pageId);
+        selectedLink.classList.add('selected');
+      }
+
+      // Show the initial page (Home)
+      showPage('home');
+    </script>
+    
+  </body>
+</html>
