@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" contents="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, totam">
     <title>Chaparral Orchestra Community</title>
     <style>
       body {
@@ -37,7 +39,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 22px;
+        height: 30px;
       }
       
       footer div {
@@ -74,7 +76,6 @@
       .calendar-iframe {
         height: 70vh;
         width: 85vw;
-        border: 0;
       }
 
       .link-list {
@@ -102,7 +103,31 @@
         color: #000;
         text-decoration: underline;
       }
+      
+      .instrument-select-table, .instrument-select-cell {
+        margin-top: 10px;
+        margin-left: 10px;        
+        border: 1px solid white;
+        background: lightgray;
+        padding: 5px;
+        font-size: 15px;
+        border-collapse: collapse;
+        flex: 1;
+        user-select: none;
+        transition: background-color 0.2s;
+      }
+      
+      .instrument-select-cell:hover,
+      .instrument-select-cell.selected {
+        background-color: darkgray;
+        color: #000;
+      }
 
+      .note-reading-video {
+        margin-left: 10px;
+      }
+
+      
     </style>
   </head>
   <body>
@@ -133,8 +158,21 @@
           </div>
         </div>
         <div id="page-note-reading" style="display: none;">
-          <h2>Note Reading Page</h2>
-          <p>This is the content of the Note Reading page.</p>
+          <h2 style="margin-left: 10px">Note Reading Videos</h2>
+          <div id="instrument-select">
+            <table class="instrument-select-table">
+              <tr class="instrument-select-row">
+                <td class="instrument-select-cell"><a href="#" onclick="showVid('violin')" id="button-violin"></a>Violin</td>
+                <td class="instrument-select-cell"><a href="#" onclick="showVid('viola')" id="button-viola"></a>Viola</td>
+                <td class="instrument-select-cell"><a href="#" onclick="showVid('cello')" id="button-cello"></a>Cello</td>
+                <td class="instrument-select-cell"><a href="#" onclick="showVid('bass')" id="button-bass"></a>Bass</td>
+              </tr>
+            </table>
+          </div>
+          <div class="note-reading-video" id="vid-violin" style="display: none;"><p>violin</p></div>
+          <div class="note-reading-video" id="vid-viola" style="display: none;"><p>viola</p></div>
+          <div class="note-reading-video" id="vid-cello" style="display: none;"><p>cello</p></div>
+          <div class="note-reading-video" id="vid-bass" style="display: none;"><p>bass</p></div>
         </div>
         <div id="page-stuff" style="display: none;">
           <h2>Stuff Page</h2>
@@ -172,7 +210,29 @@
         selectedLink.classList.add('selected');
       }
 
-      // Show the initial page (Home)
+      function showVid(vidId) {
+        const instruments = document.querySelectorAll('.instrument-select-cell');
+        const vids = document.querySelectorAll('.note-reading-video');
+
+        // Hide all vids
+        vids.forEach(vid => {
+          vid.style.display = 'none';
+        });
+
+        // Deselect all buttons
+        buttons.forEach(button => {
+          button.classList.remove('selected');
+        });
+
+        // Show selected vid
+        const selectedVid = document.getElementById('vid-' + vidId);
+        selectedVid.style.display = 'block';
+
+        // Select the clicked button
+        const selectedButton = document.getElementById('button-' + buttonId);
+        selectedButton.classList.add('selected');
+      }
+
       showPage('home');
     </script>
     
