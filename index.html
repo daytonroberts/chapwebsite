@@ -169,10 +169,10 @@
               </tr>
             </table>
           </div>
-          <div class="note-reading-video" id="vid-violin" style="display: none;"><p>violin</p></div>
-          <div class="note-reading-video" id="vid-viola" style="display: none;"><p>viola</p></div>
-          <div class="note-reading-video" id="vid-cello" style="display: none;"><p>cello</p></div>
-          <div class="note-reading-video" id="vid-bass" style="display: none;"><p>bass</p></div>
+          <div id="vid-violin" style="display: none;"><p>violin</p></div>
+          <div id="vid-viola" style="display: none;"><p>viola</p></div>
+          <div id="vid-cello" style="display: none;"><p>cello</p></div>
+          <div id="vid-bass" style="display: none;"><p>bass</p></div>
         </div>
         <div id="page-stuff" style="display: none;">
           <h2>Stuff Page</h2>
@@ -212,7 +212,7 @@
 
       function showVid(vidId) {
         const instruments = document.querySelectorAll('.instrument-select-cell');
-        const vids = document.querySelectorAll('.note-reading-video');
+        const vids = document.querySelectorAll('.page-container > div');
 
         // Hide all vids
         vids.forEach(vid => {
