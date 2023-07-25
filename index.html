@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital scale=1.0">
     <meta name="keywords" content="HTML, CSS">
-    <meta name="description" contents="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, totam">
     <title>Chaparral Orchestra Community</title>
     <style>
       body {
@@ -14,7 +13,6 @@
         font-family: Arial, sans-serif;
       }
 
-      
       header {
         background-color: #E60000;
         color: #000;
@@ -77,7 +75,8 @@
       .calendar-iframe {
         height: 70vh;
         width: 85vw;
-        padding: 5px;
+        margin-top: 10px;
+        margin-left: 10px;
       }
 
       .link-list {
@@ -153,10 +152,10 @@
 
       <div class="links-container">
         <ul class="link-list">
-          <li><a href="#" onclick="showPage('home')" id="link-home">Home</a></li>
-          <li><a href="#" onclick="showPage('calendar')" id="link-calendar">Calendar</a></li>
-          <li><a href="#" onclick="showPage('note-reading')" id="link-note-reading">Note Reading</a></li>
-          <li><a href="#" onclick="showPage('stuff')" id="link-stuff">Stuff</a></li>
+          <li><a href="#" onclick="showPage('home');" id="link-home">Home</a></li>
+          <li><a href="#" onclick="showPage('calendar');" id="link-calendar">Calendar</a></li>
+          <li><a href="#" onclick="showPage('note-reading');" id="link-note-reading">Note Reading</a></li>
+          <li><a href="#" onclick="showPage('stuff');" id="link-stuff">Stuff</a></li>
         </ul>
       </div>
 
@@ -178,7 +177,7 @@
             <h1>Chaparral Orchestra Community</h1>
           </header>
           <div id="calendar" class="calendar-iframe">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix&showNav=1&showTitle=1&title=Chaparral%20HS%20and%20Cocopah%20MS&src=YmFmZWYyMDNjNzdhYjQ1M2IyZmE1NmIxZjI5MWYwOTU5NDMxNDk4OGE5OTNiOGY2ZGM4YThjM2EzZWZjYTVjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix&showNav=1&showTitle=1&title=Chaparral%20HS%20and%20Cocopah%20MS&src=YmFmZWYyMDNjNzdhYjQ1M2IyZmE1NmIxZjI5MWYwOTU5NDMxNDk4OGE5OTNiOGY2ZGM4YThjM2EzZWZjYTVjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E" style="border:solid 1px #777" width="1500" height="650" frameborder="0" scrolling="no"></iframe>
           </div>
         </div>
 
@@ -187,15 +186,16 @@
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
-          <h2 style="margin-left: 10px">Note Reading Videos</h2>
+          <h2 style="margin-left: 10px;">Note Reading Videos</h2>
           <div class="note-reading-video-container">
             <div id="video-button-container">
               <table class="video-button-table">
                 <tr>
-                  <td class="video-button"><a href="#" onclick="showVideo('violin')" id="button-violin"></a>Violin</td>
-                  <td class="video-button"><a href="#" onclick="showVideo('viola')" id="button-viola"></a>Viola</td>
-                  <td class="video-button"><a href="#" onclick="showVideo('cello')" id="button-cello"></a>Cello</td>
-                  <td class="video-button"><a href="#" onclick="showVideo('bass')" id="button-bass"></a>Bass</td>
+                  <td class="video-button" onclick="showVideo('violin');" id="button-violin">Violin</td>
+                  <td class="video-button" onclick="showVideo('viola');" id="button-viola">Viola</td>
+                  <td class="video-button" onclick="showVideo('cello');" id="button-cello">Cello</td>
+                  <td class="video-button" onclick="showVideo('bass');" id="button-bass">Bass</td>
+                  <td style="padding: 5px; background-color: rgb(32, 33, 37); color: #fff">Click your instrument to view video</td>
                 </tr>
               </table>
             </div>
@@ -236,6 +236,7 @@
       </div>
     </footer>
     <script>
+      
       function showPage(pageId) {
         const links = document.querySelectorAll('.link-list li a');
         const pages = document.querySelectorAll('.page-container > div');
@@ -259,12 +260,55 @@
         selectedLink.classList.add('selected');
       }
       showPage('home');
-
+ 
+        
       function showVideo(videoId) {
         const video = document.getElementById(videoId + '-container');
         video.style.display = 'block';
       }
 
+      let currentVideoId = null;
+
+      function showVideo(videoId) {
+        // If the same video is clicked again, do nothing
+        if (videoId === currentVideoId) return;
+
+        const videoContainers = document.querySelectorAll('.video-container');
+        const buttons = document.querySelectorAll('.video-button');
+
+        // Hide all video containers
+        videoContainers.forEach(container => {
+          container.style.display = 'none';
+        });
+
+        // Deselect all buttons
+        buttons.forEach(button => {
+          button.classList.remove('selected');
+        });
+
+        // If a video was already playing, stop it
+        stopVideo();
+
+        currentVideoId = videoId;
+        const selectedContainer = document.getElementById(videoId + '-container');
+        selectedContainer.style.display = 'block';
+
+        // Select the clicked button
+        const selectedButton = document.getElementById('button-' + videoId);
+        selectedButton.classList.add('selected');
+      }
+
+      function stopVideo() {
+        if (currentVideoId) {
+          const currentContainer = document.getElementById(currentVideoId + '-container');
+          const iframe = currentContainer.querySelector('iframe');
+          const iframeSrc = iframe.src;
+          iframe.src = iframeSrc;
+          currentVideoId = null;
+        }
+      }
+
+      showVideo('violin')
     </script>
     
   </body>
