@@ -1,0 +1,187 @@
+    body {
+        background-color: rgb(32, 33, 37);
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow-y: scroll;
+    }
+
+    header {
+        color: #000;
+        background-color: #DF0000;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+
+    nav {
+        background-color: #020AD5;
+        color: #000;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        display: flex;
+        user-select: none;
+    }
+
+    .nav-image-container {
+        width: 16%;
+        align-items: center;
+        justify-content: center;        
+    }
+
+    .nav-image-container img{
+        height: 88px;
+        width: auto;
+    }
+
+    footer {
+        background-color: rgb(32, 33, 37);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        margin-bottom: 30px;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .home-image-container {
+        size: 100%;
+        display: flex;
+    }
+
+    .home-image-container img {
+        height: auto;
+        width: 50%;
+        border: 0;
+        padding: 0;
+    }
+
+    .container {
+    display: flex;
+    }
+
+    .links-container {
+        background-color: rgb(32, 33, 37);;
+        width: 8%;
+    }
+
+    .page-container {
+        flex: 1;
+        background-color: rgb(32, 33, 37);
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        color: #fff;
+    }
+
+    .calendar-iframe {
+        height: 70vh;
+        width: 85vw;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .link-list {
+        list-style-type: none;
+        padding: 2px;
+        height: 80vh;
+        margin: 0;
+    }
+
+    .chs_logo {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .link-list li {
+        margin-bottom: 4px;
+        user-select: none;  
+    }
+
+    .link-list li a {
+        display: block;
+        padding: 10px;
+        background-color: rgb(32, 33, 37);
+        text-decoration: none;
+        color: #fff;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+    }
+
+    .link-list li a:hover,
+    .link-list li a.selected {
+        background-color: #FF0000;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .video-button,
+    .video-button-table {
+        margin-top: 10px;
+        margin-left: 10px;        
+        border: 1px solid rgb(32, 33, 37);
+        background: lightgray;
+        color: #000;
+        padding: 5px;
+        font-size: 15px;
+        border-collapse: collapse;
+        flex: 1;
+        user-select: none;
+        transition: background-color 0.2s;
+    }
+
+    .note-reading-video-container {
+        background-color: rgb(32, 33, 37);
+    }
+
+    .video-button:hover,
+    .video-button.selected {
+        background-color: darkgray;
+    }
+
+    .video-container {
+        margin-top: 10px;
+        margin-left: 10px;
+        display: none;
+    }
+
+    .video-container iframe {
+        width: 50%;
+        height: auto;
+        border: none; 
+    }
+
+    .school-docs-container {
+        display: flex;
+    }
+
+    .one-school-docs {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .one-school-docs a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .one-school-docs a:hover {
+        text-decoration: underline;
+    }

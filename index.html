@@ -4,186 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital scale=1.0">
     <meta name="keywords" content="HTML, CSS">
+    <link rel="stylesheet" href="style.css">
     <title>Chaparral Orchestra Community</title>
-    <style>
-      body {
-        background-color: rgb(32, 33, 37);
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        overflow-y: scroll;
-      }
-
-      header {
-        color: #000;
-        background-color: #DF0000;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-      }
-
-      nav {
-        background-color: #020AD5;
-        color: #000;
-        padding: 10px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        display: flex;
-      }
-
-      .nav-image-container {
-        width: 16%;
-        align-items: center;
-        justify-content: center;        
-      }
-
-      .nav-image-container img{
-        height: 88px;
-        width: auto;
-      }
-
-      footer {
-        background-color: rgb(32, 33, 37);
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 30px;
-      }
-      
-      footer div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      hr {
-        width: 100%;
-      }
-
-      .home-image-container {
-        size: 100%;
-        flex: 1;
-      }
-
-      .home-image-container img {
-        height: auto;
-        width: 50%;
-        border: 0;
-        padding: 0;
-      }
-      
-      .container {
-        display: flex;
-      }
-
-      .links-container {
-        padding: 20px;
-        background-color: rgb(32, 33, 37);;
-        width: 8%;
-        overflow: auto;
-      }
-
-      .page-container {
-        flex: 1;
-        background-color: rgb(32, 33, 37);
-        height: 100%;
-        width: 100%;
-        overflow-y: auto;
-        color: #fff;
-      }
-
-      .calendar-iframe {
-        height: 70vh;
-        width: 85vw;
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-
-      .link-list {
-        list-style-type: none;
-        padding: 0;
-        height: 80vh
-      }
-
-      .link-list li {
-        margin-bottom: 10px;
-        user-select: none;  
-      }
-
-      .link-list li a {
-        display: block;
-        padding: 10px;
-        background-color: rgb(32, 33, 37);
-        text-decoration: none;
-        color: #fff;
-        border-radius: 4px;
-        transition: background-color 0.2s;
-      }
-
-      .link-list li a:hover,
-      .link-list li a.selected {
-        background-color: #FF0000;
-        color: #fff;
-        text-decoration: underline;
-      }
-
-      .video-button,
-      .video-button-table {
-        margin-top: 10px;
-        margin-left: 10px;        
-        border: 1px solid rgb(32, 33, 37);
-        background: lightgray;
-        color: #000;
-        padding: 5px;
-        font-size: 15px;
-        border-collapse: collapse;
-        flex: 1;
-        user-select: none;
-        transition: background-color 0.2s;
-      }
-
-      .note-reading-video-container {
-        background-color: rgb(32, 33, 37);
-      }
-
-      .video-button:hover,
-      .video-button.selected {
-        background-color: darkgray;
-      }
-
-      .video-container {
-        margin-top: 10px;
-        margin-left: 10px;
-        display: none;
-      }
-      
-      .video-container iframe {
-        width: 50%;
-        height: auto;
-        border: none; 
-      }
-
-    </style>
   </head>
   <body>   
     <div class="container">
 
 
       <div class="links-container">
+        <img class="chs_logo" src="images/CHS_Logo.png" alt="chs logo">
         <ol class="link-list">
           <li><a href="#" onclick="showPage('home');" id="link-home">Home</a></li>
           <li><a href="#" onclick="showPage('calendar');" id="link-calendar">Calendar</a></li>
           <li><a href="#" onclick="showPage('note-reading');" id="link-note-reading">Note Reading</a></li>
-          <li><a href="#" onclick="showPage('private-teaching');" id="link-private-teaching">Private Teaching</a></li>
-          <li><a href="#" onclick="showPage('stuff1');" id="link-stuff1">Stuff</a></li>
-          <li><a href="#" onclick="showPage('stuff2');" id="link-stuff2">Stuff</a></li>
+          <li><a href="#" onclick="showPage('private-teaching');" id="link-private-teaching">Private Teachers</a></li>
+          <li><a href="#" onclick="showPage('documents');" id="link-documents">Documents</a></li>
+          <li><a href="#" onclick="showPage('directors');" id="link-directors">Directors</a></li>
+          <li><a href="#" onclick="showPage('uniforms');" id="link-uniforms">Concert Uniforms</a></li>
         </ol>
       </div>
 
@@ -202,23 +39,8 @@
             <div class="nav-image-container"><img src="images/copperhorseg.png" alt="horse in shoe"></div>
           </nav>
           <div class="home-image-container">
-            <img src="images/Untitled design.png" alt="thing">
-            <!-- <div class="home-image-row">
-              <img src="images/ssb chap win.jpg" alt="chap with big check">            
-              <img src="images/disney castle.jpeg" alt="violins">
-              <img src="images/abbeyrd.jpg" alt="quartet on abbey rd image">
-              <img src="images/quintet with mayor.jpg" alt="quintet with mayor">
-              <img src="images/redhead violin.JPG" alt="girl playing violin">
-              <img src="images/OctoBass 2018.jpg" alt="MIM octobass">
-            </div>
-              <img src="images/disney conductor.jpeg" alt="disney conductor">
-              
-              <img src="images/ABODA Alyssa.jpg" alt="aboda conductor">
-              <img src="images/girls at camp.jpg" alt="two girls at retreat">
-              <img src="images/fullorchpic.jpeg" alt="full orchestra image">
-              <img src="images/girl playing blue cello.JPG" alt="girl playing blue cello">
-              <img src="images/OctoBass 2018.jpg" alt="MIM octobass"> -->
-            
+            <img src="images/Untitled design.png" alt="image collage">
+            <img src="images/8cocopahgirls.jpg" alt="dodgeball tourney">            
           </div>
         </div>
 
@@ -272,23 +94,48 @@
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
-          <h2>Private Teaching</h2>
+          <h2>Private Teachers</h2>
         </div>
 
-        <div id="page-stuff1" style="display: none;">
+        <div id="page-documents" style="display: none;">
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
-          <h2>Stuff Page</h2>
-          <p>This is the content of the Stuff page.</p>
+          <div class="school-docs-container">
+            <div class="one-school-docs">
+              <h2>Chaparral High School</h2>
+              <p>
+                <a href="pdfs/CHSO Handbook and Calendar.pdf" target="_blank">Handbook and Calendar</a>
+              </p>
+              <div class="resume-preview">
+                <iframe src="pdfs/CHSO Handbook and Calendar.pdf" frameborder="0"></iframe>
+              </div>
+            </div>
+            <div class="one-school-docs">
+              <h2>Cocopah Middle School</h2>
+              <p>
+                <a href="pdfs/CMSO Expectations and Calendar.pdf" target="_blank">Expectations and Calendar</a>
+                <img src="images/downloadbutton.png" alt="download">
+              </p>
+              <div class="resume-preview">
+                <iframe src="pdfs/CMSO Expectations and Calendar.pdf" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div id="page-stuff2" style="display: none;">
+        <div id="page-directors" style="display: none;">
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
-          <h2>Stuff Page</h2>
-          <p>This is the content of the Stuff page.</p>
+          <h2>Directors Page</h2>
+          <p>This is the content of the directors page.</p>
+        </div>
+
+        <div id="page-uniforms" style="display: none;">
+          <header>
+            <h1>Chaparral Orchestra Community</h1>
+          </header>    
         </div>
 
 
