@@ -168,20 +168,35 @@
         border: none; 
     }
 
-    .school-docs-container {
+    .split-page-container {
         display: flex;
     }
 
-    .one-school-docs {
+    .one-school-container {
         width: 50%;
-        margin-left: 10px;
+        padding: 10px;
     }
 
-    .one-school-docs a {
+    .one-school-container a {
         color: #fff;
+        text-decoration: none;
+        margin-top: 3px;
+    }
+
+    .one-school-container a:hover {
+        text-decoration: underline;
+    }
+
+    .attire-example {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .attire-example a {
+        color: lightgray;
         text-decoration: none;
     }
 
-    .one-school-docs a:hover {
+    .attire-example a:hover {
         text-decoration: underline;
     }
