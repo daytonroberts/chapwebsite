@@ -92,11 +92,16 @@ hr {
   color: #fff;
 }
 
-.calendar-iframe {
+.calendar-iframe-container {
   height: 80vh;
   width: 85vw;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+.calendar-iframe-container iframe {
+  height: 100%;
+  width: 100%;
 }
 
 .link-list {
