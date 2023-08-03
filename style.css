@@ -138,6 +138,12 @@ hr {
   text-decoration: underline;
 }
 
+.table-info {
+  padding: 5px; 
+  background-color: rgb(32, 33, 37); 
+  color: #fff;
+}
+
 .video-button,
 .video-button-table {
   margin-top: 10px;
@@ -159,7 +165,7 @@ hr {
 
 .video-button:hover,
 .video-button.selected {
-  background-color: darkgray;
+  background-color: rgb(139, 139, 139);
 }
 
 .video-container {
