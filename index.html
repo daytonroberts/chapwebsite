@@ -16,7 +16,7 @@
         <ol class="link-list">
           <li>
             <a 
-              href="#home" 
+              href="#" 
               onclick="showPage('home');" 
               id="link-home"
               >Home</a
@@ -24,7 +24,7 @@
           </li>
           <li>
             <a 
-              href="#calendar" 
+              href="#" 
               onclick="showPage('calendar');" 
               id="link-calendar"
               >Calendar</a
@@ -32,7 +32,7 @@
           </li>
           <li>
             <a
-              href="#note-reading"
+              href="#"
               onclick="showPage('note-reading');"
               id="link-note-reading"
               >Note Reading</a
@@ -40,24 +40,24 @@
           </li>
           <li>
             <a
-              href="#private-teachers"
+              href="#"
               onclick="showPage('private-teachers');"
               id="link-private-teaching"
               >Private Teachers</a
             >
           </li>
           <li>
-            <a href="#documents" onclick="showPage('documents');" id="link-documents"
+            <a href="#" onclick="showPage('documents');" id="link-documents"
               >Documents</a
             >
           </li>
           <li>
-            <a href="#directors" onclick="showPage('directors');" id="link-directors"
+            <a href="#" onclick="showPage('directors');" id="link-directors"
               >Directors</a
             >
           </li>
           <li>
-            <a href="#concert-uniforms" onclick="showPage('uniforms');" id="link-uniforms"
+            <a href="#" onclick="showPage('uniforms');" id="link-uniforms"
               >Concert Uniforms</a
             >
           </li>
@@ -99,10 +99,10 @@
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
+          <h2>Calendar</h2>
           <div id="calendar" class="calendar-iframe-container">
             <iframe
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix&showNav=1&showTitle=1&title=Chaparral%20HS%20and%20Cocopah%20MS&src=YmFmZWYyMDNjNzdhYjQ1M2IyZmE1NmIxZjI5MWYwOTU5NDMxNDk4OGE5OTNiOGY2ZGM4YThjM2EzZWZjYTVjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E"
-              style="border: solid 1px #777;"
             ></iframe>
           </div>
         </div>
@@ -111,7 +111,7 @@
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
-          <h2 style="margin-left: 10px">Note Reading Videos</h2>
+          <h2>Note Reading Videos</h2>
           <div class="note-reading-video-container">
             <div id="video-button-container">
               <table class="video-button-table">
@@ -157,11 +157,10 @@
           <header>
             <h1>Chaparral Orchestra Community</h1>
           </header>
-          <h2 style="margin-left: 10px">Private Teachers</h2>
+          <h2>Private Teachers</h2>
           <embed
             src=".pdfs/privateteachers.pdf"
             type="application/pdf"
-            style="width: 98%; height: 900px; padding: 10px;"
           >
         </div>
 
@@ -202,7 +201,9 @@
             <h1>Chaparral Orchestra Community</h1>
           </header>
           <h2>Directors Page</h2>
-          <p>This is the content of the directors page.</p>
+          <figure id="chap-director">
+            <img src="images/shanapic.PNG" alt="chap-director">
+          </figure>
         </div>
 
         <div id="page-uniforms" style="display: none">
@@ -211,7 +212,7 @@
           </header>
           <div class="split-page-container">
             <div id="chap-uni-info" class="one-school-container">
-              <h3 style="color: #df0000">Chaparral</h3>
+              <h2 style="color: #df0000">Chaparral</h2>
               <p>
                 <strong>Concert uniforms</strong> will be provided by the
                 school, dresses or tuxedos to be chosen by each individual
@@ -239,7 +240,7 @@
               </p>
             </div>
             <div id="cocopah-uni-info" class="one-school-container">
-              <h3 style="color: #020ad5">Cocopah</h3>
+              <h2 style="color: #020ad5">Cocopah</h2>
               <p>
                 <strong>Concert Dress</strong> is formal and uniform for all
                 concerts: Black dress shirt with sleeves, black skirt past the

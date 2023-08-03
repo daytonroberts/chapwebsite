@@ -8,7 +8,7 @@ body {
 
 header {
   color: #000;
-  background-color: #df0000;
+  background: linear-gradient(#000, #DF0000, gold);
   text-align: center;
   display: flex;
   align-items: center;
@@ -49,12 +49,14 @@ footer {
   justify-content: center;
   height: 30px;
   margin-bottom: 30px;
+  user-select: none;
 }
 
 footer div {
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: center;
 }
 
 hr {
@@ -106,6 +108,7 @@ a[href]:hover {
   width: 85vw;
   margin-top: 10px;
   margin-left: 10px;
+  user-select: none;
 }
 
 .calendar-iframe-container iframe {
@@ -149,7 +152,6 @@ a[href]:hover {
 }
 
 tr :last-child {
-  padding: 5px; 
   background-color: rgb(32, 33, 37); 
   color: #fff;
 }
@@ -192,13 +194,23 @@ tr :last-child {
   border: none;
 }
 
+#page-private-teachers embed {
+  width: 98%; 
+  height: 900px; 
+  padding: 10px;
+}
+
 .split-page-container {
   display: flex;
 }
 
 .one-school-container {
   width: 50%;
-  padding: 10px;
+}
+
+.one-school-container div,
+.one-school-container p {
+  margin-left: 10px;
 }
 
 .one-school-container a {
@@ -209,6 +221,14 @@ tr :last-child {
 
 .one-school-container a:hover {
   text-decoration: underline;
+}
+
+div h2:first-of-type {
+  margin-left: 10px;
+}
+
+#chap-director img{
+  margin-left: 10px;
 }
 
 .attire-example {
