@@ -8,12 +8,13 @@ body {
 
 header {
   color: #000;
-  background: linear-gradient(#000, #DF0000, gold);
+  background-color: #DF0000;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
+  width: 100%;
 }
 
 nav {
@@ -73,6 +74,10 @@ a[href]:hover {
   text-decoration: underline;
 }
 
+.page-container > div {
+  width: 100%;
+}
+
 .home-image-container {
   size: 100%;
   display: flex;
@@ -91,11 +96,11 @@ a[href]:hover {
 
 .links-container {
   background-color: rgb(32, 33, 37);
-  width: 8%;
+  width: 9%;
 }
 
 .page-container {
-  flex: 1;
+  display: flex;
   background-color: rgb(32, 33, 37);
   height: 100%;
   width: 100%;
@@ -104,7 +109,7 @@ a[href]:hover {
 }
 
 .calendar-iframe-container {
-  height: 80vh;
+  height: 70vh;
   width: 85vw;
   margin-top: 10px;
   margin-left: 10px;
@@ -136,6 +141,7 @@ a[href]:hover {
 .link-list li a {
   display: block;
   padding: 10px;
+  font-size: 100%;
   background-color: rgb(32, 33, 37);
   text-decoration: none;
   color: #fff;
@@ -184,7 +190,6 @@ tr :last-child {
 .video-container {
   margin-top: 10px;
   margin-left: 10px;
-  display: none;
   height: 400px;
 }
 
@@ -243,4 +248,16 @@ div h2:first-of-type {
 
 .attire-example p:nth-child(2)::before {
   content: "**";
+}
+
+.fun-stuff-box {
+  width: 20%;
+  text-align: left;
+}
+
+
+
+.fun-stuff-box img {
+  width: 100%;
+  height: auto;
 }
