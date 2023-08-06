@@ -33,6 +33,7 @@ nav {
 
 .nav-image-container {
   width: 16%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -40,6 +41,10 @@ nav {
 .nav-image-container img {
   height: 88px;
   width: auto;
+}
+
+.nav-image-container img:hover {
+  scale: 1.05;
 }
 
 footer {
@@ -87,19 +92,37 @@ a[href]:focus        {
 }
 
 .home-image-container {
-  size: 100%;
   display: flex;
+  background-size: contain;
 }
 
-.home-image-container img {
-  height: auto;
-  width: 50%;
-  border: 0;
+
+.home-image-column img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-image-column {
+  flex: 1;
+  width: 20%;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-image-column li {
+  flex: 1;
+  width: 100%;
 }
 
 .container {
   display: flex;
+  width: 100%;
 }
 
 .links-container {
@@ -207,14 +230,14 @@ tr :last-child {
   border: none;
 }
 
-#page-note-reading a,
-#page-note-reading p {
-  margin-left: 20px;
+.note-website-links {
+  list-style-type: none;
 }
 
-#page-note-reading p:nth-child(2n+1) {
-  font-weight: bold;
+.note-website-links li {
+  padding: 10px;
 }
+
 
 #page-private-teachers embed {
   width: 98%; 
