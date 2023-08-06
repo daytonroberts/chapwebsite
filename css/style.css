@@ -77,6 +77,11 @@ a[href]:focus        {
   text-decoration: underline;
 }
 
+#page-uniforms a {
+  color: blue;
+  text-decoration: underline;
+}
+
 .page-container > div {
   width: 100%;
 }
