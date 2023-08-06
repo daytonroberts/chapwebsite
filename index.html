@@ -101,7 +101,7 @@
           <div class="home-image-container">
             <ul class="home-image-column">
               <li><img src="images/abbeyrd.jpg" alt="abbeyrd"></li>
-              <li><img src="images/cocopah-ssb-win.jpg" alt="full orch"></li>
+              <li><img src="images/orchestra.jpg" alt="orch"></li>
               <li><img src="images/8cocopahgirls.jpg" alt="dodgeball tourney"></li>
               <li><img src="images/disney-castle.jpeg" alt="disney castle"></li>
               <li><img src="images/girls-at-camp.jpg" alt="camp"></li>
@@ -277,9 +277,51 @@
             <h1>Contact Us</h1>
           </header>
           <h2>Contact Us</h2>
-          <figure id="chap-director">
-            <img src="images/shanapic.PNG" alt="chap-director">
-          </figure>
+          <form class="contact-form" action="https://formsubmit.co/aecb7a35c67a612a020540c383bfe5f0" method="POST">
+            <div class="input-group">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" placeholder="First Last">
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+              <label for="email">Phone Number:</label>
+              <input type="number" id="phone" name="phone" placeholder="###" required>
+            </div>
+            <div class="input-group">
+              <label for="email">Subject:</label>
+              <input type="text" id="subject" name="subject" placeholder="" required>
+            </div>
+            <div class="input-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="input-group">
+              <label>Which best describes you?</label>
+              <div class="bubbles">
+                <label>
+                  <input type="radio" name="affiliation" value="Current Student" required>
+                  <span class="bubble">Current Student</span>
+                </label>
+                <label>
+                  <input type="radio" name="affiliation" value="Prospective Student">
+                  <span class="bubble">Prospective Student</span>
+                </label>
+                <label>
+                  <input type="radio" name="affiliation" value="Current Student Parent" required>
+                  <span class="bubble">Parent of Current Student</span>
+                </label>
+                <label>
+                  <input type="radio" name="affiliation" value="Prospective Student Parent" required>
+                  <span class="bubble">Parent of Prospective Student</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit">Submit</button>
+            <input type="hidden" name="_next" value="https://chaporchestracommunity.com/submitted.html">
+          </form>
         </div>
 
         <div id="page-uniforms" style="display: none;">

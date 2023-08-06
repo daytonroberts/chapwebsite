@@ -6,6 +6,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   user-select: none;
+  text-align: center;
 }
 
 header {
@@ -315,4 +316,58 @@ div h2:first-of-type {
 .one-school-container span {
   display: inline-block;
   padding: 0px 10px;
+}
+
+.contact-form {
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form h2 {
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.bubbles {
+  display: flex;
+  margin-top: 8px;
+}
+
+.bubble {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bubbles input[type="radio"] {
+  display: none;
+}
+
+.bubbles input[type="radio"]:checked + .bubble {
+  background-color: #007BFF;
+  color: #fff;
+  border-color: #007BFF;
 }
