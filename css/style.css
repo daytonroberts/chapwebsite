@@ -204,7 +204,11 @@ tr :last-child {
 
 #page-note-reading a,
 #page-note-reading p {
-  margin-left: 10px;
+  margin-left: 20px;
+}
+
+#page-note-reading p:nth-child(2n+1) {
+  font-weight: bold;
 }
 
 #page-private-teachers embed {
